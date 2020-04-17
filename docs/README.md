@@ -37,9 +37,8 @@ Z-buffering is the management of depth coordinates in 3D graphics rendering. It 
 
 
 
-To determine what pixel to draw the z-value of every shape is calculated. The pixels with the lowest value are drawn at the end.
-
-[Here](https://www.youtube.com/watch?v=yhwg_O5HBwQ) is a very simple explanation on how it’s usually done. Also [Here](https://www.youtube.com/watch?v=HyVc0X9JKpg) is another great tutorial.
+![]()
+Image taken from [here](https://larranaga.github.io/Blog/). [Here](https://www.youtube.com/watch?v=yhwg_O5HBwQ) is a very simple explanation on how it’s usually done. Also [Here](https://www.youtube.com/watch?v=HyVc0X9JKpg) is another great tutorial.
 
 ### 2D
 There is no popular solution to deal with occlusion culling in 2D that I know of, though I have seen some implementations around the internet, they vary a lot depending on the game. For example on our tiled game, we could use occlusion when we have a building, we will not need to draw the tiles it covers but this is hardly applicable to any other kind of game.
