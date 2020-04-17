@@ -17,6 +17,7 @@ This refers to the process of discarding any object completely outside the view 
 In 3D the usual approach involves creating two planes between the closest and furthest plane view of the camera, his creates the shape of a truncated pyramid the camera being the tip and the further plane the base. Then we should check for intersections between these two planes and the objects in the scene and discard the ones which are completely outside the view.
 
 ![Frustum_Culling_1](https://github.com/paupedra/Sprite-Ordering-and-Camera-Culling/blob/master/docs/images/frustum_culling_1.png)
+
 Here is an image I found [here](https://murlengine.com/tutorials/en/tut0101_cube.php) portraying the two planes and the area which should be rendered. Also [here’s](https://www.youtube.com/watch?v=4p-E_31XOPM) a very good video briefly explaining how it is calculated:
 
 ### In 2D:
@@ -50,7 +51,9 @@ This is a 3D exclusive culling which takes the polygons from single objects and 
 
 
 
-# Lonks:
+# Links:
+
+I'll leave here all the links I used for my research as well other articles and websites which I thought had very good information if someone wants to really expand their knowladge in these subjects, hope they are useful to you!
 
 [Sorting for isometric Moving platforms] (https://gamedevelopment.tutsplus.com/tutorials/isometric-depth-sorting-for-moving-platforms--cms-30226)
 
@@ -61,24 +64,24 @@ This is a 3D exclusive culling which takes the polygons from single objects and 
 
 Culling:
 Frustum:
-[View Frustum Culling Lighthouse3d](-http://www.lighthouse3d.com/tutorials/view-frustum-culling/)
-[Math for Game Developers - Frustum Culling] (https://www.youtube.com/watch?v=4p-E_31XOPM)
-[Frustum Culling Gamedev](-https://www.gamedev.net/tutorials/programming/general-and-gameplay-programming/frustum-culling-r4613/)
+[View Frustum Culling Lighthouse3d](http://www.lighthouse3d.com/tutorials/view-frustum-culling/)
+[Math for Game Developers - Frustum Culling](https://www.youtube.com/watch?v=4p-E_31XOPM)
+[Frustum Culling Gamedev](https://www.gamedev.net/tutorials/programming/general-and-gameplay-programming/frustum-culling-r4613/)
 
 occlusion:
-https://larranaga.github.io/Blog/
-https://www.gamasutra.com/view/feature/131801/occlusion_culling_algorithms.php
-https://en.wikipedia.org/wiki/Painter%27s_algorithm
-https://en.wikipedia.org/wiki/Z-buffering
-https://www.gamesindustry.biz/articles/2016-12-07-overview-on-popular-occlusion-culling-techniques
+[Z-Buffering](https://larranaga.github.io/Blog/)
+[](https://www.gamasutra.com/view/feature/131801/occlusion_culling_algorithms.php)
+[](https://en.wikipedia.org/wiki/Painter%27s_algorithm)
+[](https://en.wikipedia.org/wiki/Z-buffering)
+[](https://www.gamesindustry.biz/articles/2016-12-07-overview-on-popular-occlusion-culling-techniques)
 
 Backface Cull:
-https://www.gamedev.net/tutorials/_/technical/graphics-programming-and-theory/3d-backface-culling-r1088/
+[](https://www.gamedev.net/tutorials/_/technical/graphics-programming-and-theory/3d-backface-culling-r1088/)
 
 
-https://sherzock.github.io/Sprite-Ordering-and-Camera-Culling/
-https://christt105.github.io/Sprite_Ordering_and_Camera_Culling_Personal_Research/
-https://ferba93.github.io/Camera-Culling-and-Sprite-Ordering/
-https://gamedev.stackexchange.com/questions/25896/how-do-i-find-which-isometric-tiles-are-inside-the-cameras-current-view
-https://forum.yoyogames.com/index.php?threads/smart-isometric-drawing-order.57356/
-https://en.wikipedia.org/wiki/Video_game_graphics#Top-down_perspective
+[](https://sherzock.github.io/Sprite-Ordering-and-Camera-Culling/)
+[](https://christt105.github.io/Sprite_Ordering_and_Camera_Culling_Personal_Research/)
+[](https://ferba93.github.io/Camera-Culling-and-Sprite-Ordering/)
+[](https://gamedev.stackexchange.com/questions/25896/how-do-i-find-which-isometric-tiles-are-inside-the-cameras-current-view)
+[](https://forum.yoyogames.com/index.php?threads/smart-isometric-drawing-order.57356/)
+[](https://en.wikipedia.org/wiki/Video_game_graphics#Top-down_perspective)
