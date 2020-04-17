@@ -33,7 +33,9 @@ There is an image taken from [here](https://www.gamasutra.com/view/feature/13180
 ### 3D
 
 #### Z-Buffering or depth buffering:
-Z-buffering is the management of depth coordinates in 3D graphics rendering. It is used to solve the problem of visibility between objects which are aligned between them with the camera. Z-value refers to the measure of the perpendicular line between the 3D space coordinates of a pixel on the projection plane and the camera.
+Z-buffering is the management of depth coordinates in 3D graphics rendering. It is used to solve the problem of visibility between objects which are aligned between them with the camera. Z-value refers to the measure of the perpendicular line between the 3D space coordinates of a pixel on the projection plane and the camera. Every single pixel in the screen has a Z-value and in each frame the objects which intersect with the pixel's line are looped and the distance between that point of intersection and the camera is saved in the Z-buffer. Every object modifies the Z-value if it's Z is lowest than the previous value so in the end only the closest object will be drawn.
+
+
 
 To determine what pixel to draw the z-value of every shape is calculated. The pixels with the lowest value are drawn at the end.
 
