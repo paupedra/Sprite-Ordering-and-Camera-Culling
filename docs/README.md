@@ -18,6 +18,10 @@ In 3D the usual approach involves creating two planes between the closest and fu
 
 ![frustum culling](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/frustum_culling_1.png "Frustum CUlling Pyramid")
 
+Here we have an example on how this works insinde Horizon Zero Dawn.
+
+![Zero dawn showing frustum culling](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/zero_dawn_gif.gif)
+
 Here is an image I found [here](https://murlengine.com/tutorials/en/tut0101_cube.php) portraying the two planes and the area which should be rendered. Also [here’s](https://www.youtube.com/watch?v=4p-E_31XOPM) a very good video briefly explaining how it is calculated:
 
 ### In 2D:
