@@ -16,6 +16,7 @@ This refers to the process of discarding any object completely outside the view 
 ### In 3D:
 In 3D the usual approach involves creating two planes between the closest and furthest plane view of the camera, his creates the shape of a truncated pyramid the camera being the tip and the further plane the base. Then we should check for intersections between these two planes and the objects in the scene and discard the ones which are completely outside the view.
 
+<ima src=https://github.com/paupedra/Sprite-Ordering-and-Camera-Culling/blob/master/docs/images/frustum_culling_1.png>
 ![Frustum_Culling_1](https://github.com/paupedra/Sprite-Ordering-and-Camera-Culling/blob/master/docs/images/frustum_culling_1.png "Is this working?")
 
 Here is an image I found [here](https://murlengine.com/tutorials/en/tut0101_cube.php) portraying the two planes and the area which should be rendered. Also [here’s](https://www.youtube.com/watch?v=4p-E_31XOPM) a very good video briefly explaining how it is calculated:
@@ -35,9 +36,8 @@ There is an image taken from [here](https://www.gamasutra.com/view/feature/13180
 #### Z-Buffering or depth buffering:
 Z-buffering is the management of depth coordinates in 3D graphics rendering. It is used to solve the problem of visibility between objects which are aligned between them with the camera. Z-value refers to the measure of the perpendicular line between the 3D space coordinates of a pixel on the projection plane and the camera. Every single pixel in the screen has a Z-value and in each frame the objects which intersect with the pixel's line are looped and the distance between that point of intersection and the camera is saved in the Z-buffer. Every object modifies the Z-value if it's Z is lowest than the previous value so in the end only the closest object will be drawn.
 
+<img src=>
 
-
-![]()
 Image taken from [here](https://larranaga.github.io/Blog/). [Here](https://www.youtube.com/watch?v=yhwg_O5HBwQ) is a very simple explanation on how it’s usually done. Also [Here](https://www.youtube.com/watch?v=HyVc0X9JKpg) is another great tutorial.
 
 ### 2D
@@ -56,6 +56,7 @@ Maybe you noticed that I just mentioned two very important things, view frustum 
 
 But let’s get into the important use here, frustum culling. First I’d like to talk a bit more about how quadtrees work so that we can later try and implement this.
 
+<img src=https://github.com/paupedra/Sprite-Ordering-and-Camera-Culling/blob/master/docs/images/Quadtrees_1.png>
 ![Quadtree Space Partition](https://github.com/paupedra/Sprite-Ordering-and-Camera-Culling/blob/master/docs/images/Quadtrees_1.png "Quadtree space partition")
 
 As any tree data structures quadtrees use recursion to be able to call their subsequent children. A space partitioning quadtree is created by inserting points or objects into it, first it will check if the object is inside the boundaries of the tree, if so, if the node is at its full capacity it will divide it into four and do the same process again for every one of the four new nodes. This will happen until the quadtree reaches the maximum levels which are defined when it’s created.
