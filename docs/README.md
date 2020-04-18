@@ -2,11 +2,11 @@
 
 In rendering, camera culling is a way of optimizing our Render calls so that only things visible inside the camera are drawn. This is very import for any kind of video game here is a list of reasons why you should care about culling:
 
-There will be a bigger limit to the size of the map/levels in the game
-There will be more processing power to be spent on gameplay
-Game will run smoothly in machines with less resources
-Highest resolution will be more easily achieved
-It’s optimal
++ There will be a bigger limit to the size of the map/levels in the game
++ There will be more processing power to be spent on gameplay
++ Game will run smoothly in machines with less resources
++ Highest resolution will be more easily achieved
++ It’s optimal
 
 Now that you see why you would be interested in having culling in your game let’s go through some of the types of culling.
 
