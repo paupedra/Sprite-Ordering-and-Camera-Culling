@@ -43,6 +43,8 @@ There is no popular solution to deal with occlusion culling in 2D that I know of
 ## Backface Cull:
 This is a 3D exclusive culling which takes the polygons from single objects and calculates if they will be visible to the camera, and if they are not these won’t be rendered. Let’s say we are seeing a cube from the front, the only polygon which will be seen by the camera is a single face, so the backface cull will make sure the other squares are not drawn.
 
+![backface_cull](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/backface_culling_1.PNG "Backface Cull calculus example")
+
 Image taken from [Here](https://www.gamedev.net/tutorials/_/technical/graphics-programming-and-theory/3d-backface-culling-r1088/), it's also a great example on how this could be implemented.
 
 ## Quadtrees:
