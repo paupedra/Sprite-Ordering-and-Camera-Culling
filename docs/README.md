@@ -25,7 +25,14 @@ Image found [here](https://murlengine.com/tutorials/en/tut0101_cube.php) portray
 Here we have a visual representation on how this works insinde Horizon Zero Dawn.
 
 ### In 2D:
-In 2D frustum is a bit simpler since there is one less dimension the only calculations needed are to check if an object is inside our camera rectangle. But this doesn’t mean that it is easy to do this efficiently, we will see later how this can be done in our game.
+In 2D frustum is a bit simpler since there is one less dimension the only calculations needed are to check if an object is inside our camera rectangle. But this doesn’t mean that it is easy to do this efficiently. In
+
+## Backface Cull:
+This is a 3D exclusive culling which takes the polygons from single objects and calculates if they will be visible to the camera, and if they are not these won’t be rendered. Let’s say we are seeing a cube from the front, the only polygon which will be seen by the camera is a single face, so the backface cull will make sure the other squares are not drawn.
+
+![backface_cull](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/backface_culling_1.PNG "Backface Cull calculus example")
+
+Image taken from [Here](https://www.gamedev.net/tutorials/_/technical/graphics-programming-and-theory/3d-backface-culling-r1088/), it's also a great example on how this could be implemented.
 
 ## Occlusion culling: 
 This type of culling makes sure that objects which are hidden/occluded behind other objects are not drawn. 
@@ -33,6 +40,7 @@ This type of culling makes sure that objects which are hidden/occluded behind ot
 There is an image taken from [here](https://www.gamasutra.com/view/feature/131801/occlusion_culling_algorithms.php) shows a case in which occlusion can be very useful. The article is pretty interesting, it explains with more detail the occlusion process so I recommend checking it out.
 
 ### 3D
+To be as efficient as possible we want to only draw the pixels which will be visible and not the ones occluded. Even the pixels from polygons intersecting between them.
 
 #### Z-Buffering or depth buffering:
 Z-buffering is the management of depth coordinates in 3D graphics rendering. It is used to solve the problem of visibility between objects which are aligned between them with the camera. Z-value refers to the measure of the perpendicular line between the 3D space coordinates of a pixel on the projection plane and the camera. Every single pixel in the screen has a Z-value and in each frame the objects which intersect with the pixel's line are looped and the distance between that point of intersection and the camera is saved in the Z-buffer. Every object modifies the Z-value if it's Z is lowest than the previous value so in the end only the closest object will be drawn.
@@ -43,13 +51,6 @@ Image taken from [here](https://larranaga.github.io/Blog/). [Here](https://www.y
 
 ### 2D
 There is no popular solution to deal with occlusion culling in 2D that I know of, though I have seen some implementations around the internet, they vary a lot depending on the game. For example on our tiled game, we could use occlusion when we have a building, we will not need to draw the tiles it covers but this is hardly applicable to any other kind of game.
-
-## Backface Cull:
-This is a 3D exclusive culling which takes the polygons from single objects and calculates if they will be visible to the camera, and if they are not these won’t be rendered. Let’s say we are seeing a cube from the front, the only polygon which will be seen by the camera is a single face, so the backface cull will make sure the other squares are not drawn.
-
-![backface_cull](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/backface_culling_1.PNG "Backface Cull calculus example")
-
-Image taken from [Here](https://www.gamedev.net/tutorials/_/technical/graphics-programming-and-theory/3d-backface-culling-r1088/), it's also a great example on how this could be implemented.
 
 ## Quadtrees:
 
