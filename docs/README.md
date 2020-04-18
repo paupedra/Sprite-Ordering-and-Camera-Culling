@@ -14,7 +14,7 @@ Now that you see why you would be interested in having culling in your game let�
 This refers to the process of discarding any object completely outside the view of the camera. It effects performance dramatically and it’s mandatory for almost any kind of game. It is applicable to both 2D and 3D graphics.
 
 ### In 3D:
-In 3D the usual approach involves creating two planes between the closest and furthest plane view of the camera, his creates the shape of a truncated pyramid the camera being the tip and the further plane the base. Then we should check for intersections between these two planes and the objects in the scene and discard the ones which are completely outside the view.
+In 3D the usual approach involves creating two planes between the closest and furthest plane view of the camera, his creates the shape of a truncated pyramid, the camera being the tip and the further plane the base. Then we should check for intersections between these two planes and the objects in the scene and discard the ones which are completely outside the view.
 
 ![frustum culling](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/frustum_culling_1.png "Frustum CUlling Pyramid")
 
@@ -39,7 +39,7 @@ This type of culling makes sure that objects which are hidden/occluded behind ot
 
 There is an image taken from [here](https://www.gamasutra.com/view/feature/131801/occlusion_culling_algorithms.php) shows a case in which occlusion can be very useful. The article is pretty interesting, it explains with more detail the occlusion process so I recommend checking it out.
 
-### 3D
+### In 3D
 To be as efficient as possible we want to only draw the pixels which will be visible and not the ones occluded. Even the pixels from polygons intersecting between them.
 
 #### Z-Buffering or depth buffering:
@@ -49,8 +49,23 @@ Z-buffering is the management of depth coordinates in 3D graphics rendering. It 
 
 Image taken from [here](https://larranaga.github.io/Blog/). [Here](https://www.youtube.com/watch?v=yhwg_O5HBwQ) is a very simple explanation on how it’s usually done. Also [Here](https://www.youtube.com/watch?v=HyVc0X9JKpg) is another great tutorial.
 
-### 2D
-There is no popular solution to deal with occlusion culling in 2D that I know of, though I have seen some implementations around the internet, they vary a lot depending on the game. For example on our tiled game, we could use occlusion when we have a building, we will not need to draw the tiles it covers but this is hardly applicable to any other kind of game.
+### In 2D
+There is no popular solution to deal with occlusion culling in 2D that I know of, though I have seen some implementations around the internet, they vary a lot depending on the game. For example on our tiled game, we could use occlusion when we have a building, we will not need to draw the tiles it covers but this is hardly applicable to any other kind of game, so I encourage you to find in what ways you can optimize your 2D game with Occlusion culling!
+
+# Sprite ordering
+
+## Two dimensions:
+Sprite rendering order is a necessary feature in a video game, without it the game would lack the feeling of depth and credibility from the player since in real life objects overlap each other all the time depending on their distance to the viewer.
+
+In orthogonal view only two dimensions are represented. Some examples of this kind of view used in games would be side scrolling platformers or top down games. This means that the only depth that will be represented is between the objects which are further or closer to the camera in a fixed way. In this kind of view layers are used to define in which order sprites are drawn.
+
+![metroid_example](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/metroid_example.png “Metroid Example”)
+
+The background should always be drawn under the rest of the objects and the rest can be sorted in any way since they usually won’t collide, though this can change depending on the game, an usual order would be: background - platforms/floor - entities. As an example a platformer would have a leyer for: Platforms, player character, enemies and background.
+
+But in our case we have done the jump to what is usually called 2.5D or 3/4 which means that the elements are no longer in a fixed order and we can now “view” 3 dimensions. Though this third dimension is not really there because we are using 2D sprites we still have to create the illusion that it exists. This demands a way of dynamically change the order in which objects are drawn to remain consistent in showing depth when we have moving entities or creating them.
+
+Objects which are further from the camera are the ones drawn first therefore will be overlapped by closer objects so we should order them using their Y position on screen from top to bottom.
 
 ## Quadtrees:
 
