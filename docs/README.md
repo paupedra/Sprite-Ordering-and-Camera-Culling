@@ -48,6 +48,17 @@ This is a 3D exclusive culling which takes the polygons from single objects and 
 
 [Here](https://www.gamedev.net/tutorials/_/technical/graphics-programming-and-theory/3d-backface-culling-r1088/) is a good example on how this could be implemented.
 
+# Quadtrees:
+
+It’s a tree data structure with each node having 4 children. They are commonly used to partition space in a 2D space. These are commonly used in image processing, mesh generation, view frustum culling of terrain data and efficient collision detection amongst others.
+
+Maybe you noticed that I just mentioned two very important things, view frustum culling and efficient collision detection. Collision detection is not part of this research but it’s a very important and significant optimization in every game which could use any kind of collision detection, maybe even for looking for targets to attack for an RTS game… Anyways I’ll leave a very good series of videos [here](https://www.youtube.com/watch?v=z0YFFg_nBjw&t=799s) which shows how to create a quadtree and then use it for optimizing collision detection.
+
+But let’s get into the important use here, frustum culling. First I’d like to talk a bit more about how quadtrees work so that we can later try and implement this.
+
+![Quadtree Space Partition](https://github.com/paupedra/Sprite-Ordering-and-Camera-Culling/blob/master/docs/images/Quadtrees_1.png "Quadtree space partition")
+
+As any tree data structures quadtrees use recursion to be able to call their subsequent children. A space partitioning quadtree is created by inserting points or objects into it, first it will check if the object is inside the boundaries of the tree, if so, if the node is at its full capacity it will divide it into four and do the same process again for every one of the four new nodes. This will happen until the quadtree reaches the maximum levels which are defined when it’s created.
 
 
 
