@@ -59,7 +59,7 @@ Sprite rendering order is a necessary feature in a video game, without it the ga
 
 In orthogonal view only two dimensions are represented. Some examples of this kind of view used in games would be side scrolling platformers or top down games. This means that the only depth that will be represented is between the objects which are further or closer to the camera in a fixed way. In this kind of view layers are used to define in which order sprites are drawn.
 
-![metroid_example](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/metroid_example.png “Metroid Example”)
+![metroid_example](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/metroid_example.png)
 
 The background should always be drawn under the rest of the objects and the rest can be sorted in any way since they usually won’t collide, though this can change depending on the game, an usual order would be: background - platforms/floor - entities. As an example a platformer would have a leyer for: Platforms, player character, enemies and background.
 
