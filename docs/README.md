@@ -18,11 +18,11 @@ In 3D the usual approach involves creating two planes between the closest and fu
 
 ![frustum culling](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/frustum_culling_1.png "Frustum CUlling Pyramid")
 
-Here we have an example on how this works insinde Horizon Zero Dawn.
+Image found [here](https://murlengine.com/tutorials/en/tut0101_cube.php) portraying the two planes and the area which should be rendered. Also [here’s](https://www.youtube.com/watch?v=4p-E_31XOPM) a very good video briefly explaining how it is calculated:
 
 ![Zero dawn showing frustum culling](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/zero_dawn_gif.gif)
 
-Here is an image I found [here](https://murlengine.com/tutorials/en/tut0101_cube.php) portraying the two planes and the area which should be rendered. Also [here’s](https://www.youtube.com/watch?v=4p-E_31XOPM) a very good video briefly explaining how it is calculated:
+Here we have a visual representation on how this works insinde Horizon Zero Dawn.
 
 ### In 2D:
 In 2D frustum is a bit simpler since there is one less dimension the only calculations needed are to check if an object is inside our camera rectangle. But this doesn’t mean that it is easy to do this efficiently, we will see later how this can be done in our game.
