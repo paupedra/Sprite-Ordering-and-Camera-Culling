@@ -18,6 +18,7 @@ In 3D the usual approach involves creating two planes between the closest and fu
 
 <img src="https://github.com/paupedra/Sprite-Ordering-and-Camera-Culling/blob/master/docs/images/frustum_culling_1.png" alt="bruh">
 <img src="/docs/images/frustum_culling_1.png">
+![Frustum Culling](https://github.com/paupedra/Sprite-Ordering-and-Camera-Culling/blob/master/docs/images/frustum_culling_1.png "Frustum Culling Pyramid")
 
 Here is an image I found [here](https://murlengine.com/tutorials/en/tut0101_cube.php) portraying the two planes and the area which should be rendered. Also [here’s](https://www.youtube.com/watch?v=4p-E_31XOPM) a very good video briefly explaining how it is calculated:
 
