@@ -54,6 +54,7 @@ There is no popular solution to deal with occlusion culling in 2D that I know of
 
 # Sprite ordering
 
+
 ## Two dimensions:
 Sprite rendering order is a necessary feature in a video game, without it the game would lack the feeling of depth and credibility from the player since in real life objects overlap each other all the time depending on their distance to the viewer.
 
