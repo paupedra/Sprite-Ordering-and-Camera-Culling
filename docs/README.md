@@ -17,7 +17,7 @@ This refers to the process of discarding any object completely outside the view 
 In 3D the usual approach involves creating two planes between the closest and furthest plane view of the camera, his creates the shape of a truncated pyramid the camera being the tip and the further plane the base. Then we should check for intersections between these two planes and the objects in the scene and discard the ones which are completely outside the view.
 
 <img src="https://github.com/paupedra/Sprite-Ordering-and-Camera-Culling/blob/master/docs/images/frustum_culling_1.png">
-<img src="docs/images/frustum_culling_1.png">
+<img src="/docs/images/frustum_culling_1.png">
 
 Here is an image I found [here](https://murlengine.com/tutorials/en/tut0101_cube.php) portraying the two planes and the area which should be rendered. Also [here’s](https://www.youtube.com/watch?v=4p-E_31XOPM) a very good video briefly explaining how it is calculated:
 
