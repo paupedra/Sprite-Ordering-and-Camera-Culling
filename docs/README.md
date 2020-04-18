@@ -10,7 +10,7 @@ In rendering, camera culling is a way of optimizing our Render calls so that onl
 
 Now that you see why you would be interested in having culling in your game let’s go through some of the types of culling.
 
-## Frustum Culling: 
+## 1. Frustum Culling: 
 This refers to the process of discarding any object completely outside the view of the camera. It effects performance dramatically and it’s mandatory for almost any kind of game. It is applicable to both 2D and 3D graphics.
 
 ### In 3D:
@@ -18,19 +18,29 @@ In 3D the usual approach involves creating two planes between the closest and fu
 
 ![frustum culling](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/frustum_culling_1.png "Frustum CUlling Pyramid")
 
-Here is an image I found [here](https://murlengine.com/tutorials/en/tut0101_cube.php) portraying the two planes and the area which should be rendered. Also [here’s](https://www.youtube.com/watch?v=4p-E_31XOPM) a very good video briefly explaining how it is calculated:
+Image found [here](https://murlengine.com/tutorials/en/tut0101_cube.php) portraying the two planes and the area which should be rendered. Also [here’s](https://www.youtube.com/watch?v=4p-E_31XOPM) a very good video briefly explaining how it is calculated:
+
+![Zero dawn showing frustum culling](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/zero_dawn_gif.gif)
+
+Here we have a visual representation on how this works insinde Horizon Zero Dawn.
 
 ### In 2D:
-In 2D frustum is a bit simpler since there is one less dimension the only calculations needed are to check if an object is inside our camera rectangle. But this doesn’t mean that it is easy to do this efficiently, we will see later how this can be done in our game.
+In 2D frustum is a bit simpler since there is one less dimension the only calculations needed are to check if an object is inside our camera rectangle. But this doesn’t mean that it is easy to do this efficiently. In
 
+## 2. Backface Cull:
+This is a 3D exclusive culling which takes the polygons from single objects and calculates if they will be visible to the camera, and if they are not these won’t be rendered. Let’s say we are seeing a cube from the front, the only polygon which will be seen by the camera is a single face, so the backface cull will make sure the other squares are not drawn.
 
-## Occlusion culling: 
+![backface_cull](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/backface_culling_1.PNG "Backface Cull calculus example")
+
+Image taken from [Here](https://www.gamedev.net/tutorials/_/technical/graphics-programming-and-theory/3d-backface-culling-r1088/), it's also a great example on how this could be implemented.
+
+## 3. Occlusion culling: 
 This type of culling makes sure that objects which are hidden/occluded behind other objects are not drawn. 
-
 
 There is an image taken from [here](https://www.gamasutra.com/view/feature/131801/occlusion_culling_algorithms.php) shows a case in which occlusion can be very useful. The article is pretty interesting, it explains with more detail the occlusion process so I recommend checking it out.
 
 ### 3D
+To be as efficient as possible we want to only draw the pixels which will be visible and not the ones occluded. Even the pixels from polygons intersecting between them.
 
 #### Z-Buffering or depth buffering:
 Z-buffering is the management of depth coordinates in 3D graphics rendering. It is used to solve the problem of visibility between objects which are aligned between them with the camera. Z-value refers to the measure of the perpendicular line between the 3D space coordinates of a pixel on the projection plane and the camera. Every single pixel in the screen has a Z-value and in each frame the objects which intersect with the pixel's line are looped and the distance between that point of intersection and the camera is saved in the Z-buffer. Every object modifies the Z-value if it's Z is lowest than the previous value so in the end only the closest object will be drawn.
@@ -42,25 +52,17 @@ Image taken from [here](https://larranaga.github.io/Blog/). [Here](https://www.y
 ### 2D
 There is no popular solution to deal with occlusion culling in 2D that I know of, though I have seen some implementations around the internet, they vary a lot depending on the game. For example on our tiled game, we could use occlusion when we have a building, we will not need to draw the tiles it covers but this is hardly applicable to any other kind of game.
 
-## Backface Cull:
-This is a 3D exclusive culling which takes the polygons from single objects and calculates if they will be visible to the camera, and if they are not these won’t be rendered. Let’s say we are seeing a cube from the front, the only polygon which will be seen by the camera is a single face, so the backface cull will make sure the other squares are not drawn.
+## Quadtrees:
 
-[Here](https://www.gamedev.net/tutorials/_/technical/graphics-programming-and-theory/3d-backface-culling-r1088/) is a good example on how this could be implemented.
-
-# Quadtrees:
-
-It’s a tree data structure with each node having 4 children. They are commonly used to partition space in a 2D space. These are commonly used in image processing, mesh generation, view frustum culling of terrain data and efficient collision detection amongst others.
+A Quadtree is a tree data structure with each node having 4 children. They are commonly used to partition space in a 2D space. These are commonly used in image processing, mesh generation, view frustum culling of terrain data and efficient collision detection amongst others.
 
 Maybe you noticed that I just mentioned two very important things, view frustum culling and efficient collision detection. Collision detection is not part of this research but it’s a very important and significant optimization in every game which could use any kind of collision detection, maybe even for looking for targets to attack for an RTS game… Anyways I’ll leave a very good series of videos [here](https://www.youtube.com/watch?v=z0YFFg_nBjw&t=799s) which shows how to create a quadtree and then use it for optimizing collision detection.
 
-But let’s get into the important use here, frustum culling. First I’d like to talk a bit more about how quadtrees work so that we can later try and implement this.
+But let’s get into the important use here, frustum culling. First I’d like to talk a bit more about how quadtrees work so that you can later try and implement this.
 
 ![Quadtree space partition](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/Quadtrees_1.png "QUadtree space partition")
 
 As any tree data structures quadtrees use recursion to be able to call their subsequent children. A space partitioning quadtree is created by inserting points or objects into it, first it will check if the object is inside the boundaries of the tree, if so, if the node is at its full capacity it will divide it into four and do the same process again for every one of the four new nodes. This will happen until the quadtree reaches the maximum levels which are defined when it’s created.
-
-
-
 
 # Links:
 
