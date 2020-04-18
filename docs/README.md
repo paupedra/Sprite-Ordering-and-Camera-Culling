@@ -10,7 +10,7 @@ In rendering, camera culling is a way of optimizing our Render calls so that onl
 
 Now that you see why you would be interested in having culling in your game let’s go through some of the types of culling.
 
-## Frustum Culling: 
+## 1. Frustum Culling: 
 This refers to the process of discarding any object completely outside the view of the camera. It effects performance dramatically and it’s mandatory for almost any kind of game. It is applicable to both 2D and 3D graphics.
 
 ### In 3D:
@@ -27,14 +27,14 @@ Here we have a visual representation on how this works insinde Horizon Zero Dawn
 ### In 2D:
 In 2D frustum is a bit simpler since there is one less dimension the only calculations needed are to check if an object is inside our camera rectangle. But this doesn’t mean that it is easy to do this efficiently. In
 
-## Backface Cull:
+## 2. Backface Cull:
 This is a 3D exclusive culling which takes the polygons from single objects and calculates if they will be visible to the camera, and if they are not these won’t be rendered. Let’s say we are seeing a cube from the front, the only polygon which will be seen by the camera is a single face, so the backface cull will make sure the other squares are not drawn.
 
 ![backface_cull](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/backface_culling_1.PNG "Backface Cull calculus example")
 
 Image taken from [Here](https://www.gamedev.net/tutorials/_/technical/graphics-programming-and-theory/3d-backface-culling-r1088/), it's also a great example on how this could be implemented.
 
-## Occlusion culling: 
+## 3. Occlusion culling: 
 This type of culling makes sure that objects which are hidden/occluded behind other objects are not drawn. 
 
 There is an image taken from [here](https://www.gamasutra.com/view/feature/131801/occlusion_culling_algorithms.php) shows a case in which occlusion can be very useful. The article is pretty interesting, it explains with more detail the occlusion process so I recommend checking it out.
