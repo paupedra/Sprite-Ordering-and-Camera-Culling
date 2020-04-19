@@ -83,11 +83,11 @@ This methods consists on dividing the static sprites in two different parts, the
 
 We can see this in action in “The Legend of Zelda: A link to the past” for the SNES with this tree here, though it is also used in other structures such as houses.
 
-![zelda_example_1](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/zelda_example_1.png)
+![zelda_example_1](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/zelda_example_1.png "zelda_example_1")
 
 As I hope you can appreciate Link is under the Tree Top and at the same time over the Trunk of the tree so we can see that these are clearly two different sprites layered in a certain order. This next image portrays exactly how they are ordered.
 
-![zelda_example_2](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/zelda_example_2.png)
+![zelda_example_2](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/zelda_example_2.png "zelda_example_2")
 
 Another example of this that I found in an isometric game is from the game Pocket City for Android and IOS. This is a very rudimentary approach which works in this game but is not really applicable to any isometric game. It also takes extra work to set up for every single different sprite in the game so it is not very sustainable. Here are some visuals to show how they did it.
 
