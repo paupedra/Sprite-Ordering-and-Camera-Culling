@@ -101,9 +101,13 @@ Another example of this that I found in an isometric game is from the game Pocke
 
 ### Dynamic ordering using Y position
 
+This is the dsired method,and I would argue it is the most used in 2D non orthogonal views. All entities will havea point in the center of their base, and every frame they will be sorted from highest to lowest Y position so that they are drawn in the correct order.
 
+I will explain how I implemented this later on.
 
+# My Implementation:
 
+First problem we have to deal with is camera culling. To avoid using Brute Force I'm going tu use space partitioning. This is a technique which will dramatically help with being able to find objects which are in certain positions without having to loop through all of the Tiles or Entities. to do this I will introduce you to Quadtrees.
 
 ## Quadtrees:
 
