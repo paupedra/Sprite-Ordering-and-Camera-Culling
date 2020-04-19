@@ -89,13 +89,20 @@ As I hope you can appreciate Link is under the Tree Top and at the same time ove
 
 ![zelda_example_2](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/zelda_example_2.png "zelda_example_2")
 
+Also in the following picture we can see how even the dynamic entities are not ordered. This is probably because they couldn't afford to use so many resources on doing dynamic ordering. Here is an image to prove this.
+
+![zelda_example_3](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/zelda_example_3.png "zelda_example_3")
+
 Another example of this that I found in an isometric game is from the game Pocket City for Android and IOS. This is a very rudimentary approach which works in this game but is not really applicable to any isometric game. It also takes extra work to set up for every single different sprite in the game so it is not very sustainable. Here are some visuals to show how they did it.
 
 ![pocket_city_2](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/pocket_city_2.png)
 
 ![pocket_city_1](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/pocket_city_1.gif)
 
-### Dynamic ordering
+### Dynamic ordering using Y position
+
+
+
 
 
 ## Quadtrees:
