@@ -71,7 +71,7 @@ The background should always be drawn under the rest of the objects and the rest
 ## Three dimensions
 But in our case we have done the jump to what is usually called 2.5D or 3/4 which means that the elements are no longer in a fixed order and we can now “view” 3 dimensions. Though this third dimension is not really there because we are using 2D sprites we still have to create the illusion that it exists. This demands a way of dynamically change the order in which objects are drawn to remain consistent in showing depth when we have moving entities or creating new ones.
 
-![Final Fantasy Tactics Example]((https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/final_fantasy_tactics_example.png "Final Fantasy Tactics Example")
+![Final Fantasy Tactics Example](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/final_fantasy_tactics_example.png "Final Fantasy Tactics Example")
 
 Objects which are further from the camera are the ones drawn first therefore will be overlapped by closer objects so we should order them using their Y position on screen from top to bottom. The position used to make this calculations should usually be their central position on the map. Now I would like to go through some implementations done by fellow developers and some of the problems and solutions they found.
 
