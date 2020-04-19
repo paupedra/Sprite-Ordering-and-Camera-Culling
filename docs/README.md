@@ -68,9 +68,35 @@ In orthogonal view only two dimensions are represented. Some examples of this ki
 
 The background should always be drawn under the rest of the objects and the rest can be sorted in any way since they usually won’t collide, though this can change depending on the game, an usual order would be: background - platforms/floor - entities. As an example a platformer would have a leyer for: Platforms, player character, enemies and background.
 
-But in our case we have done the jump to what is usually called 2.5D or 3/4 which means that the elements are no longer in a fixed order and we can now “view” 3 dimensions. Though this third dimension is not really there because we are using 2D sprites we still have to create the illusion that it exists. This demands a way of dynamically change the order in which objects are drawn to remain consistent in showing depth when we have moving entities or creating them.
+## Three dimensions
+But in our case we have done the jump to what is usually called 2.5D or 3/4 which means that the elements are no longer in a fixed order and we can now “view” 3 dimensions. Though this third dimension is not really there because we are using 2D sprites we still have to create the illusion that it exists. This demands a way of dynamically change the order in which objects are drawn to remain consistent in showing depth when we have moving entities or creating new ones.
 
-Objects which are further from the camera are the ones drawn first therefore will be overlapped by closer objects so we should order them using their Y position on screen from top to bottom.
+![Final Fantasy Tactics Example]((https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/final_fantasy_tactics_example.png "Final Fantasy Tactics Example")
+
+Objects which are further from the camera are the ones drawn first therefore will be overlapped by closer objects so we should order them using their Y position on screen from top to bottom. The position used to make this calculations should usually be their central position on the map. Now I would like to go through some implementations done by fellow developers and some of the problems and solutions they found.
+
+## Sprite Ordering methods found:
+
+### Sprite cutting and layers:
+
+This methods consists on dividing the static sprites in two different parts, the lower or base which will be overlapped by the dynamic entities moving close to it and the top part which will overlap them.
+
+We can see this in action in “The Legend of Zelda: A link to the past” for the SNES with this tree here, though it is also used in other structures such as houses.
+
+![zelda_example_1](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/zelda_example_1.png)
+
+As I hope you can appreciate Link is under the Tree Top and at the same time over the Trunk of the tree so we can see that these are clearly two different sprites layered in a certain order. This next image portrays exactly how they are ordered.
+
+![zelda_example_2](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/zelda_example_2.png)
+
+Another example of this that I found in an isometric game is from the game Pocket City for Android and IOS. This is a very rudimentary approach which works in this game but is not really applicable to any isometric game. It also takes extra work to set up for every single different sprite in the game so it is not very sustainable. Here are some visuals to show how they did it.
+
+![pocket_city_2](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/pocket_city_2.png)
+
+![pocket_city_1](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/pocket_city_1.gif)
+
+### Dynamic ordering
+
 
 ## Quadtrees:
 
