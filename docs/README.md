@@ -52,6 +52,7 @@ Image taken from [here](https://larranaga.github.io/Blog/). [Here](https://www.y
 ### In 2D
 There is no popular solution to deal with occlusion culling in 2D that I know of, though I have seen some implementations around the internet, they vary a lot depending on the game. For example on our tiled game, we could use occlusion when we have a building, we will not need to draw the tiles it covers but this is hardly applicable to any other kind of game, so I encourage you to find in what ways you can optimize your 2D game with Occlusion culling!
 
+## Final visual representation
 This should help as a visual summary on how frustum and occlusion culling combined should look like in a 3D graphics game. I will also leave a link to the website this was found in which contains a lot of information on how to achieve faster rendering. It talks extensively about the points I brought up and even lower level graphics theory. [High-Level Strategic Tools for Fast Rendering](https://techpubs.jurassic.nl/manuals/nt/developer/Optimizer_PG/sgi_html/pt02.html)
 
 ![Frustum and Occlusion representation](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/perfect_example.png "Frustum and Occlusion representation")
