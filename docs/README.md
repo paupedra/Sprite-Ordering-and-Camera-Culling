@@ -121,6 +121,12 @@ But let’s get into the important use here, frustum culling. First I’d like t
 
 As any tree data structures quadtrees use recursion to be able to call their subsequent children. A space partitioning quadtree is created by inserting points or objects into it, first it will check if the object is inside the boundaries of the tree, if so, if the node is at its full capacity it will divide it into four and do the same process again for every one of the four new nodes. This will happen until the quadtree reaches the maximum levels which are defined when it’s created.
 
+## Sprite Ordering:
+
+The chosen approach for our game Project F will be ordering by Y position on screen. To do this we will need to sort all the entities we found inside our screen.
+
+First we need to create the center point variable inside our Entity class, which will be different depending on the dimensions of our entities. If the entity is dynamic the position should be updated constantly.
+
 # Links:
 
 I'll leave here all the links I used for my research as well other articles and websites which I thought had very good information if someone wants to really expand their knowladge in these subjects, hope they are useful to you!
