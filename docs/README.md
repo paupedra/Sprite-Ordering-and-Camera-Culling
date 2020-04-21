@@ -136,24 +136,28 @@ First we need to create the center point variable inside our Entity class, which
 
 I'll leave here all the links I used for my research as well other articles and websites which I thought had very good information if someone wants to really expand their knowladge in these subjects, hope they are useful to you!
 
-[Sorting for isometric Moving platforms] (https://gamedevelopment.tutsplus.com/tutorials/isometric-depth-sorting-for-moving-platforms--cms-30226)
+[Sorting for isometric Moving platforms](https://gamedevelopment.tutsplus.com/tutorials/isometric-depth-sorting-for-moving-platforms--cms-30226)
 
-[Advcanced Isometric Sprite Sorting Tutorial] (https://www.youtube.com/watch?v=yRZlVrinw9I)
+[Advcanced Isometric Sprite Sorting Tutorial](https://www.youtube.com/watch?v=yRZlVrinw9I)
 
-[What I learned from trying to make an Isometric game in Unity](https://www.gamasutra.com/blogs/MartinPane/20170309/290889/What_I_learned_from_trying_to_make_an_Isometric_game_in_Unity.php)
+[What I learned from trying to make an Isometric game in Unity(https://www.gamasutra.com/blogs/MartinPane/20170309/290889/What_I_learned_from_trying_to_make_an_Isometric_game_in_Unity.php)
 
 
 Culling:
 Frustum:
-[View Frustum Culling Lighthouse3d](-http://www.lighthouse3d.com/tutorials/view-frustum-culling/)
-[Math for Game Developers - Frustum Culling] (https://www.youtube.com/watch?v=4p-E_31XOPM)
-[Frustum Culling Gamedev](-https://www.gamedev.net/tutorials/programming/general-and-gameplay-programming/frustum-culling-r4613/)
+[View Frustum Culling Lighthouse3d](http://www.lighthouse3d.com/tutorials/view-frustum-culling/)
+[Math for Game Developers - Frustum Culling](https://www.youtube.com/watch?v=4p-E_31XOPM)
+[Frustum Culling Gamedev](https://www.gamedev.net/tutorials/programming/general-and-gameplay-programming/frustum-culling-r4613/)
 
 occlusion:
 https://larranaga.github.io/Blog/
+
 https://www.gamasutra.com/view/feature/131801/occlusion_culling_algorithms.php
+
 https://en.wikipedia.org/wiki/Painter%27s_algorithm
+
 https://en.wikipedia.org/wiki/Z-buffering
+
 https://www.gamesindustry.biz/articles/2016-12-07-overview-on-popular-occlusion-culling-techniques
 
 Backface Cull:
