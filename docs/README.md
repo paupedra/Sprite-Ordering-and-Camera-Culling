@@ -27,6 +27,10 @@ Here we have a visual representation on how this works insinde Horizon Zero Dawn
 ### In 2D:
 In 2D frustum is a bit simpler since there is one less dimension the only calculations needed are to check if an object is inside our camera rectangle. But this doesn’t mean that it is easy to do this efficiently. In
 
+A lot of times the problem is that this is done using “Brute Force”. Brute Force basically means that to know what objects should or shouldn’t be rendered every single one of them is looped and checked if it is inside the camera view. This is not very sustainable specially with games which manage a very big amount of entities or tiles. Brute Force can be used in cases where there are not that many entities.
+
+So, we need some way to know what objects are on screen or at least close to it without looping them all. I will explain both of my solutions to this problem later.
+
 ## 2. Backface Cull:
 This is a 3D exclusive culling which takes the polygons from single objects and calculates if they will be visible to the camera, and if they are not these won’t be rendered. Let’s say we are seeing a cube from the front, the only polygon which will be seen by the camera is a single face, so the backface cull will make sure the other squares are not drawn.
 
