@@ -27,6 +27,10 @@ Here we have a visual representation on how this works insinde Horizon Zero Dawn
 ### In 2D:
 In 2D frustum is a bit simpler since there is one less dimension the only calculations needed are to check if an object is inside our camera rectangle. But this doesn’t mean that it is easy to do this efficiently. In
 
+A lot of times the problem is that this is done using “Brute Force”. Brute Force basically means that to know what objects should or shouldn’t be rendered every single one of them is looped and checked if it is inside the camera view. This is not very sustainable specially with games which manage a very big amount of entities or tiles. Brute Force can be used in cases where there are not that many entities.
+
+So, we need some way to know what objects are on screen or at least close to it without looping them all. I will explain both of my solutions to this problem later.
+
 ## 2. Backface Cull:
 This is a 3D exclusive culling which takes the polygons from single objects and calculates if they will be visible to the camera, and if they are not these won’t be rendered. Let’s say we are seeing a cube from the front, the only polygon which will be seen by the camera is a single face, so the backface cull will make sure the other squares are not drawn.
 
@@ -52,6 +56,7 @@ Image taken from [here](https://larranaga.github.io/Blog/). [Here](https://www.y
 ### In 2D
 There is no popular solution to deal with occlusion culling in 2D that I know of, though I have seen some implementations around the internet, they vary a lot depending on the game. For example on our tiled game, we could use occlusion when we have a building, we will not need to draw the tiles it covers but this is hardly applicable to any other kind of game, so I encourage you to find in what ways you can optimize your 2D game with Occlusion culling!
 
+## Final visual representation
 This should help as a visual summary on how frustum and occlusion culling combined should look like in a 3D graphics game. I will also leave a link to the website this was found in which contains a lot of information on how to achieve faster rendering. It talks extensively about the points I brought up and even lower level graphics theory. [High-Level Strategic Tools for Fast Rendering](https://techpubs.jurassic.nl/manuals/nt/developer/Optimizer_PG/sgi_html/pt02.html)
 
 ![Frustum and Occlusion representation](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/perfect_example.png "Frustum and Occlusion representation")
@@ -101,9 +106,13 @@ Another example of this that I found in an isometric game is from the game Pocke
 
 ### Dynamic ordering using Y position
 
+This is the dsired method,and I would argue it is the most used in 2D non orthogonal views. All entities will havea point in the center of their base, and every frame they will be sorted from highest to lowest Y position so that they are drawn in the correct order.
 
+I will explain how I implemented this later on.
 
+# My Implementation:
 
+First problem we have to deal with is camera culling. To avoid using Brute Force I'm going tu use space partitioning. This is a technique which will dramatically help with being able to find objects which are in certain positions without having to loop through all of the Tiles or Entities. to do this I will introduce you to Quadtrees.
 
 ## Quadtrees:
 
@@ -116,6 +125,12 @@ But let’s get into the important use here, frustum culling. First I’d like t
 ![Quadtree space partition](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/Quadtrees_1.png "QUadtree space partition")
 
 As any tree data structures quadtrees use recursion to be able to call their subsequent children. A space partitioning quadtree is created by inserting points or objects into it, first it will check if the object is inside the boundaries of the tree, if so, if the node is at its full capacity it will divide it into four and do the same process again for every one of the four new nodes. This will happen until the quadtree reaches the maximum levels which are defined when it’s created.
+
+## Sprite Ordering:
+
+The chosen approach for our game Project F will be ordering by Y position on screen. To do this we will need to sort all the entities we found inside our screen.
+
+First we need to create the center point variable inside our Entity class, which will be different depending on the dimensions of our entities. If the entity is dynamic the position should be updated constantly.
 
 # Links:
 
