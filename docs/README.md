@@ -145,24 +145,19 @@ I'll leave here all the links I used for my research as well other articles and 
 
 Culling:
 Frustum:
-[View Frustum Culling Lighthouse3d](http://www.lighthouse3d.com/tutorials/view-frustum-culling/)
-[Math for Game Developers - Frustum Culling](https://www.youtube.com/watch?v=4p-E_31XOPM)
-[Frustum Culling Gamedev](https://www.gamedev.net/tutorials/programming/general-and-gameplay-programming/frustum-culling-r4613/)
+[View Frustum Culling Lighthouse3d](-http://www.lighthouse3d.com/tutorials/view-frustum-culling/)
+[Math for Game Developers - Frustum Culling] (https://www.youtube.com/watch?v=4p-E_31XOPM)
+[Frustum Culling Gamedev](-https://www.gamedev.net/tutorials/programming/general-and-gameplay-programming/frustum-culling-r4613/)
 
 occlusion:
-[Z-Buffering](https://larranaga.github.io/Blog/)
-[](https://www.gamasutra.com/view/feature/131801/occlusion_culling_algorithms.php)
-[](https://en.wikipedia.org/wiki/Painter%27s_algorithm)
-[](https://en.wikipedia.org/wiki/Z-buffering)
-[](https://www.gamesindustry.biz/articles/2016-12-07-overview-on-popular-occlusion-culling-techniques)
+https://larranaga.github.io/Blog/
+https://www.gamasutra.com/view/feature/131801/occlusion_culling_algorithms.php
+https://en.wikipedia.org/wiki/Painter%27s_algorithm
+https://en.wikipedia.org/wiki/Z-buffering
+https://www.gamesindustry.biz/articles/2016-12-07-overview-on-popular-occlusion-culling-techniques
 
 Backface Cull:
-[](https://www.gamedev.net/tutorials/_/technical/graphics-programming-and-theory/3d-backface-culling-r1088/)
+https://www.gamedev.net/tutorials/_/technical/graphics-programming-and-theory/3d-backface-culling-r1088/
 
-
-[](https://sherzock.github.io/Sprite-Ordering-and-Camera-Culling/)
-[](https://christt105.github.io/Sprite_Ordering_and_Camera_Culling_Personal_Research/)
-[](https://ferba93.github.io/Camera-Culling-and-Sprite-Ordering/)
-[](https://gamedev.stackexchange.com/questions/25896/how-do-i-find-which-isometric-tiles-are-inside-the-cameras-current-view)
-[](https://forum.yoyogames.com/index.php?threads/smart-isometric-drawing-order.57356/)
-[](https://en.wikipedia.org/wiki/Video_game_graphics#Top-down_perspective)
+Culling General:
+[High-Level Strategic Tools for Fast Rendering](https://techpubs.jurassic.nl/manuals/nt/developer/Optimizer_PG/sgi_html/pt02.html)
