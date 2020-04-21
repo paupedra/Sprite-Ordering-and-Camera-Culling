@@ -140,7 +140,7 @@ I'll leave here all the links I used for my research as well other articles and 
 
 [Advcanced Isometric Sprite Sorting Tutorial](https://www.youtube.com/watch?v=yRZlVrinw9I)
 
-[What I learned from trying to make an Isometric game in Unity(https://www.gamasutra.com/blogs/MartinPane/20170309/290889/What_I_learned_from_trying_to_make_an_Isometric_game_in_Unity.php)
+[What I learned from trying to make an Isometric game in Unity](https://www.gamasutra.com/blogs/MartinPane/20170309/290889/What_I_learned_from_trying_to_make_an_Isometric_game_in_Unity.php)
 
 
 Culling:
