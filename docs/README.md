@@ -122,9 +122,17 @@ Maybe you noticed that I just mentioned two very important things, view frustum 
 
 But let’s get into the important use here, frustum culling. First I’d like to talk a bit more about how quadtrees work so that you can later try and implement this.
 
-![Quadtree space partition](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/Quadtrees_1.png "QUadtree space partition")
+![Quadtree space partition](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/Quadtrees_1.png "Quadtree space partition")
 
 As any tree data structures quadtrees use recursion to be able to call their subsequent children. A space partitioning quadtree is created by inserting points or objects into it, first it will check if the object is inside the boundaries of the tree, if so, if the node is at its full capacity it will divide it into four and do the same process again for every one of the four new nodes. This will happen until the quadtree reaches the maximum levels which are defined when it’s created.
+
+Here is the base Quadtree class I used:
+
+![Quadtree parent class](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/quadtree_implementation_01.png)
+
+And here the child class for the tiles:
+
+![CHild tiles class](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/quadtree_implementation_02.png)
 
 ## Sprite Ordering:
 
@@ -136,6 +144,7 @@ First we need to create the center point variable inside our Entity class, which
 
 I'll leave here all the links I used for my research as well other articles and websites which I thought had very good information if someone wants to really expand their knowladge in these subjects, hope they are useful to you!
 
+## Sprite ordering:
 [Sorting for isometric Moving platforms](https://gamedevelopment.tutsplus.com/tutorials/isometric-depth-sorting-for-moving-platforms--cms-30226)
 
 [Advcanced Isometric Sprite Sorting Tutorial](https://www.youtube.com/watch?v=yRZlVrinw9I)
@@ -143,25 +152,34 @@ I'll leave here all the links I used for my research as well other articles and 
 [What I learned from trying to make an Isometric game in Unity](https://www.gamasutra.com/blogs/MartinPane/20170309/290889/What_I_learned_from_trying_to_make_an_Isometric_game_in_Unity.php)
 
 
-Culling:
-Frustum:
+## Culling:
+### Frustum:
 [View Frustum Culling Lighthouse3d](http://www.lighthouse3d.com/tutorials/view-frustum-culling/)
+
 [Math for Game Developers - Frustum Culling](https://www.youtube.com/watch?v=4p-E_31XOPM)
+
 [Frustum Culling Gamedev](https://www.gamedev.net/tutorials/programming/general-and-gameplay-programming/frustum-culling-r4613/)
 
-occlusion:
-https://larranaga.github.io/Blog/
+### Occlusion:
+[Nicolas Larrañaga](https://larranaga.github.io/Blog/)
 
-https://www.gamasutra.com/view/feature/131801/occlusion_culling_algorithms.php
+[Gamasutra Occlusion Culling algorithm](https://www.gamasutra.com/view/feature/131801/occlusion_culling_algorithms.php)
 
-https://en.wikipedia.org/wiki/Painter%27s_algorithm
+[ Wikipedia: Z-Buffering](https://en.wikipedia.org/wiki/Z-buffering)
 
-https://en.wikipedia.org/wiki/Z-buffering
+[Overview on popular occlusion culling techniques
+](https://www.gamesindustry.biz/articles/2016-12-07-overview-on-popular-occlusion-culling-techniques)
 
-https://www.gamesindustry.biz/articles/2016-12-07-overview-on-popular-occlusion-culling-techniques
+### Backface Cull:
+[Gamedev Graphics programming and theory](https://www.gamedev.net/tutorials/_/technical/graphics-programming-and-theory/3d-backface-culling-r1088/)
 
-Backface Cull:
-https://www.gamedev.net/tutorials/_/technical/graphics-programming-and-theory/3d-backface-culling-r1088/
-
-Culling General:
+### Culling General:
 [High-Level Strategic Tools for Fast Rendering](https://techpubs.jurassic.nl/manuals/nt/developer/Optimizer_PG/sgi_html/pt02.html)
+
+## Other year's researches:
+
+[Research by Sherzok](https://sherzock.github.io/Sprite-Ordering-and-Camera-Culling/)
+
+[Research by Christt105](https://christt105.github.io/Sprite_Ordering_and_Camera_Culling_Personal_Research/)
+
+[Research by Ferba93](https://ferba93.github.io/Camera-Culling-and-Sprite-Ordering/)
