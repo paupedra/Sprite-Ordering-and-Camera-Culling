@@ -128,7 +128,7 @@ As any tree data structures quadtrees use recursion to be able to call their sub
 
 Here is the base Quadtree class I used:
 
-![Quadtree parent class](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/quadtree_implementation_01.png)
+![Quadtree parent class](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/quadtree_implementation_01.PNG)
 
 And here the child class for the tiles:
 
