@@ -136,32 +136,27 @@ First we need to create the center point variable inside our Entity class, which
 
 I'll leave here all the links I used for my research as well other articles and websites which I thought had very good information if someone wants to really expand their knowladge in these subjects, hope they are useful to you!
 
+## Sprite ordering:
 [Sorting for isometric Moving platforms](https://gamedevelopment.tutsplus.com/tutorials/isometric-depth-sorting-for-moving-platforms--cms-30226)
-
 [Advcanced Isometric Sprite Sorting Tutorial](https://www.youtube.com/watch?v=yRZlVrinw9I)
-
 [What I learned from trying to make an Isometric game in Unity](https://www.gamasutra.com/blogs/MartinPane/20170309/290889/What_I_learned_from_trying_to_make_an_Isometric_game_in_Unity.php)
 
 
-Culling:
-Frustum:
-[View Frustum Culling Lighthouse3d](http://www.lighthouse3d.com/tutorials/view-frustum-culling/)
-[Math for Game Developers - Frustum Culling](https://www.youtube.com/watch?v=4p-E_31XOPM)
-[Frustum Culling Gamedev](https://www.gamedev.net/tutorials/programming/general-and-gameplay-programming/frustum-culling-r4613/)
+## Culling:
+### Frustum:
+[View Frustum Culling Lighthouse3d](-http://www.lighthouse3d.com/tutorials/view-frustum-culling/)
+[Math for Game Developers - Frustum Culling] (https://www.youtube.com/watch?v=4p-E_31XOPM)
+[Frustum Culling Gamedev](-https://www.gamedev.net/tutorials/programming/general-and-gameplay-programming/frustum-culling-r4613/)
 
-occlusion:
-https://larranaga.github.io/Blog/
+### Occlusion:
+[Nicolas Larrañaga](https://larranaga.github.io/Blog/)
+[Gamasutra Occlusion Culling algorithm](https://www.gamasutra.com/view/feature/131801/occlusion_culling_algorithms.php)
+[ Wikipedia: Z-Buffering](https://en.wikipedia.org/wiki/Z-buffering)
+[Overview on popular occlusion culling techniques
+](https://www.gamesindustry.biz/articles/2016-12-07-overview-on-popular-occlusion-culling-techniques)
 
-https://www.gamasutra.com/view/feature/131801/occlusion_culling_algorithms.php
+### Backface Cull:
+[Gamedev Graphics programming and theory](https://www.gamedev.net/tutorials/_/technical/graphics-programming-and-theory/3d-backface-culling-r1088/)
 
-https://en.wikipedia.org/wiki/Painter%27s_algorithm
-
-https://en.wikipedia.org/wiki/Z-buffering
-
-https://www.gamesindustry.biz/articles/2016-12-07-overview-on-popular-occlusion-culling-techniques
-
-Backface Cull:
-https://www.gamedev.net/tutorials/_/technical/graphics-programming-and-theory/3d-backface-culling-r1088/
-
-Culling General:
+### Culling General:
 [High-Level Strategic Tools for Fast Rendering](https://techpubs.jurassic.nl/manuals/nt/developer/Optimizer_PG/sgi_html/pt02.html)
