@@ -122,9 +122,17 @@ Maybe you noticed that I just mentioned two very important things, view frustum 
 
 But let’s get into the important use here, frustum culling. First I’d like to talk a bit more about how quadtrees work so that you can later try and implement this.
 
-![Quadtree space partition](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/Quadtrees_1.png "QUadtree space partition")
+![Quadtree space partition](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/Quadtrees_1.png "Quadtree space partition")
 
 As any tree data structures quadtrees use recursion to be able to call their subsequent children. A space partitioning quadtree is created by inserting points or objects into it, first it will check if the object is inside the boundaries of the tree, if so, if the node is at its full capacity it will divide it into four and do the same process again for every one of the four new nodes. This will happen until the quadtree reaches the maximum levels which are defined when it’s created.
+
+Here is the base Quadtree class I used:
+
+![Quadtree parent class](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/quadtree_implementation_01.png)
+
+And here the child class for the tiles:
+
+![CHild tiles class](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/quadtree_implementation_02.png)
 
 ## Sprite Ordering:
 
