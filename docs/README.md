@@ -132,13 +132,21 @@ Here is the base Quadtree class I used:
 
 And here the child class for the tiles:
 
-![Child tiles class](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/quadtree_implementation_02.png)
+![Child tiles class](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/quadtree_implementation_02.PNG)
 
 ## Sprite Ordering:
 
 The chosen approach for our game Project F will be ordering by Y position on screen. To do this we will need to sort all the entities we found inside our screen.
 
 First we need to create the center point variable inside our Entity class, which will be different depending on the dimensions of our entities. If the entity is dynamic the position should be updated constantly.
+
+To sort the entities first we should get the ones that are actually on screen. For this I used brute force since we don't have that many entities and we have to update them anyways. Once I have a list of entities in screen I use algorithm std::sort which allows me to create a condition to order my list. 
+
+Here is the sctruct created to sort the units as well as my sort function:
+
+![Comparison struct](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/comparison_01.PNG)
+
+![Sort function](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/comparison_02.PNG)
 
 # Links:
 
