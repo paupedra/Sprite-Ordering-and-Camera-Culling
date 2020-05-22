@@ -167,3 +167,11 @@ I'll leave here all the links I used for my research as well other articles and 
 
 ### Culling General:
 [High-Level Strategic Tools for Fast Rendering](https://techpubs.jurassic.nl/manuals/nt/developer/Optimizer_PG/sgi_html/pt02.html)
+
+## Other year's researches:
+
+[Research by Sherzok](https://sherzock.github.io/Sprite-Ordering-and-Camera-Culling/)
+
+[Research by Christt105](https://christt105.github.io/Sprite_Ordering_and_Camera_Culling_Personal_Research/)
+
+[Research by Ferba93](https://ferba93.github.io/Camera-Culling-and-Sprite-Ordering/)
