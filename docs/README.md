@@ -138,17 +138,19 @@ I'll leave here all the links I used for my research as well other articles and 
 
 ## Sprite ordering:
 [Sorting for isometric Moving platforms](https://gamedevelopment.tutsplus.com/tutorials/isometric-depth-sorting-for-moving-platforms--cms-30226)
+
 [Advcanced Isometric Sprite Sorting Tutorial](https://www.youtube.com/watch?v=yRZlVrinw9I)
+
 [What I learned from trying to make an Isometric game in Unity](https://www.gamasutra.com/blogs/MartinPane/20170309/290889/What_I_learned_from_trying_to_make_an_Isometric_game_in_Unity.php)
 
 
 ## Culling:
 ### Frustum:
-[View Frustum Culling Lighthouse3d](-http://www.lighthouse3d.com/tutorials/view-frustum-culling/)
+[View Frustum Culling Lighthouse3d](http://www.lighthouse3d.com/tutorials/view-frustum-culling/)
 
-[Math for Game Developers - Frustum Culling] (https://www.youtube.com/watch?v=4p-E_31XOPM)
+[Math for Game Developers - Frustum Culling](https://www.youtube.com/watch?v=4p-E_31XOPM)
 
-[Frustum Culling Gamedev](-https://www.gamedev.net/tutorials/programming/general-and-gameplay-programming/frustum-culling-r4613/)
+[Frustum Culling Gamedev](https://www.gamedev.net/tutorials/programming/general-and-gameplay-programming/frustum-culling-r4613/)
 
 ### Occlusion:
 [Nicolas Larrañaga](https://larranaga.github.io/Blog/)
