@@ -145,13 +145,18 @@ I'll leave here all the links I used for my research as well other articles and 
 ## Culling:
 ### Frustum:
 [View Frustum Culling Lighthouse3d](-http://www.lighthouse3d.com/tutorials/view-frustum-culling/)
+
 [Math for Game Developers - Frustum Culling] (https://www.youtube.com/watch?v=4p-E_31XOPM)
+
 [Frustum Culling Gamedev](-https://www.gamedev.net/tutorials/programming/general-and-gameplay-programming/frustum-culling-r4613/)
 
 ### Occlusion:
 [Nicolas Larrañaga](https://larranaga.github.io/Blog/)
+
 [Gamasutra Occlusion Culling algorithm](https://www.gamasutra.com/view/feature/131801/occlusion_culling_algorithms.php)
+
 [ Wikipedia: Z-Buffering](https://en.wikipedia.org/wiki/Z-buffering)
+
 [Overview on popular occlusion culling techniques
 ](https://www.gamesindustry.biz/articles/2016-12-07-overview-on-popular-occlusion-culling-techniques)
 
