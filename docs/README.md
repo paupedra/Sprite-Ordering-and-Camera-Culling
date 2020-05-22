@@ -132,7 +132,7 @@ Here is the base Quadtree class I used:
 
 And here the child class for the tiles:
 
-![CHild tiles class](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/quadtree_implementation_02.png)
+![Child tiles class](https://raw.githubusercontent.com/paupedra/Sprite-Ordering-and-Camera-Culling/master/docs/images/quadtree_implementation_02.png)
 
 ## Sprite Ordering:
 
